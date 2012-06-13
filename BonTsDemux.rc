@@ -1,0 +1,236 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#include ""res\\BonTsDemux.rc2""  // Microsoft Visual C++ 以外で編集されたリソース\r\n"
+    "#include ""afxres.rc""     // 標準コンポーネント\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\BonTsDemux.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 258, 57
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "バージョン情報 BonTsDemux"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "BonTsDemux Version 1.10 mod.10k7 + nogui + es +fix05",IDC_STATIC,40,10,154,17,SS_NOPREFIX
+    LTEXT           "http://2sen.dip.jp/friio/",IDC_STATIC,40,30,119,8
+    DEFPUSHBUTTON   "OK",IDOK,198,6,50,16,WS_GROUP
+    LTEXT           "Code from FAAD2 is copyright (c) Nero AG, www.nero.com",IDC_STATIC,40,40,176,8
+END
+
+IDD_BONTSDEMUX_DIALOG DIALOGEX 0, 0, 351, 281
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
+CAPTION "BonTsDemux Ver.1.10 mod.10k7+nogui+es+fix05  http://2sen.dip.jp/friio/ (modified by LxbEvo.FpE, kt, bm, saba, moke, pika, fuji)"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "入力TSファイル(&T)",IDC_STATIC,7,6,337,36
+    EDITTEXT        IDC_TSPATH,18,18,258,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照(&I)...",IDC_BROWSETS,282,18,50,14
+    GROUPBOX        "ビデオ出力ファイル(&V) (拡張子は、変換時に付加されるため不要)",IDC_STATIC,7,45,337,96
+    EDITTEXT        IDC_VIDEOPATH,18,57,258,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照(&O)...",IDC_BROWSEVIDEO,282,57,50,14
+    LTEXT           "デフォルト出力フォルダ(&F)",IDC_STATIC,20,78,69,8
+    EDITTEXT        IDC_FOLDERPATH,90,75,186,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照(&L)...",IDC_BROWSEFOLDER,282,75,50,14
+    LTEXT           "エンコード方式",IDC_STATIC,12,97,40,8
+    COMBOBOX        IDC_COMBO1,55,94,87,92,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "サービス選択",IDC_STATIC,16,113,36,8
+    COMBOBOX        IDC_SVCOMBO,55,111,87,47,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "更新",IDC_SERVICE_REFLESH,143,111,18,14
+    LTEXT           "音声出力方式",IDC_STATIC,164,97,42,8
+    COMBOBOX        IDC_COMBO_SOUND,209,94,61,64,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "音声ES",IDC_STATIC,184,113,23,8
+    COMBOBOX        IDC_COMBO_AUDIOES,209,110,21,43,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "音声遅延補正",IDC_STATIC,164,128,43,10
+    EDITTEXT        IDC_AUDIO_DELAY,209,126,26,12,ES_AUTOHSCROLL
+    LTEXT           "ms",IDC_STATIC,237,128,10,8
+    CONTROL         "RF64サポート",IDC_CHECK_RF64,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,274,95,53,10
+    CONTROL         "Video Frame補完",IDC_FRAME_HOKAN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,274,105,67,10
+    CONTROL         "スクランブル解除",IDC_DESCRAMBLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,274,115,60,10
+    GROUPBOX        "バッチリスト(&B)",IDC_STATIC,7,145,337,71
+    LISTBOX         IDC_BATCH_LIST,11,157,269,52,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "追加(&A)",IDC_BATCH_ADD,289,160,50,14
+    PUSHBUTTON      "削除(&D)",IDC_BATCH_DEL,289,177,50,14
+    PUSHBUTTON      "置換(&R)",IDC_BUTTON_REPLACE,289,194,50,14
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER | 0x1,7,219,337,14
+    LTEXT           "",IDC_INFOVIEW,6,240,337,14,SS_CENTERIMAGE | SS_SUNKEN
+    CONTROL         "バックグラウンドモード(&B)",IDC_USE_BACKGROUND_MODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,156,258,80,18
+    DEFPUSHBUTTON   "変換開始(&S)",IDC_START,238,260,50,14
+    PUSHBUTTON      "中止",IDC_STOP,294,260,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,0,0
+ PRODUCTVERSION 1,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041103a4"
+        BEGIN
+            VALUE "Comments", "BonTsDemux"
+            VALUE "CompanyName", "http://2sen.dip.jp/friio/"
+            VALUE "FileDescription", "Bon TS Demultiplexor"
+            VALUE "FileVersion", "1.1.0.0"
+            VALUE "InternalName", "BonTsDemux.exe"
+            VALUE "LegalCopyright", "http://2sen.dip.jp/friio/"
+            VALUE "OriginalFilename", "BonTsDemux.exe"
+            VALUE "ProductVersion", "BonTsDemux Version 1.10 mod.10k7 + nogui + es +fix05"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 932
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_BONTSDEMUX_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 344
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 274
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "res\\BonTsDemux.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "バージョン情報 BonTsDemux(&A)..."
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE 17, 1
+#pragma code_page(932)
+#include "res\BonTsDemux.rc2"  // Microsoft Visual C++ 以外で編集されたリソース
+#include "afxres.rc"     // 標準コンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

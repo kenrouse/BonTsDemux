@@ -1,0 +1,58 @@
+TARGETNAME=BonTsEngine
+
+TARGETPATH=obj
+
+TARGETTYPE=LIBRARY
+
+TARGETLIBS=
+
+INCLUDES=$(DDK_INC_PATH);..;..\AacDecoder;..\HelperClass
+
+SOURCES=AacConverter.cpp \
+	BcasCard.cpp \
+	BcasCardM.cpp \
+	Buffer.cpp \
+	EcmDat.cpp \
+#	EventHandler.cpp \
+	FileReader.cpp \
+	FileWriter.cpp \
+	HttpSend.cpp \
+	KeepRate.cpp \
+	MediaData.cpp \
+	MediaDecoder.cpp \
+	MediaGrabber.cpp \
+	Multi2Decoder.cpp \
+	NetworkSend.cpp \
+	NFile.cpp \
+	ProgManager.cpp \
+	qE77TinkWavWriter.cpp \
+	RingBuffer.cpp \
+	TsBuffer.cpp \
+	TsDemuxer.cpp \
+	TsDescrambler.cpp \
+	TsDescriptor.cpp \
+	TsEncode.cpp \
+	TsMedia.cpp \
+	TsPacketParser.cpp \
+	TsServiceSelect.cpp \
+	TsStream.cpp \
+	TsTable.cpp \
+	TsUtilClass.cpp \
+	WaveWriter.cpp
+
+i386_SOURCES=
+AMD64_SOURCES=
+IA64_SOURCES=
+
+386_STDCALL=0
+
+COMPILER_WX_SWITCH=
+
+#USE_MFC=1
+USE_MFCUNICODE=1
+#USE_STATIC_MFC=1
+#USE_MSVCRT=1
+
+USE_STL=1
+STL_VER=60
+
