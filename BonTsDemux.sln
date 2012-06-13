@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BonTsDemux", "BonTsDemux.vc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BonTsDemuxLib", "BonTsDemuxLib.vcxproj", "{802903FF-59BA-45E4-80B4-36AFCA499F8A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BonTsDemuxC", "BonTsDemuxC.vcxproj", "{5EBDAF1C-91FB-4FE5-88FF-F3FFB1B10674}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -24,6 +26,12 @@ Global
 		{802903FF-59BA-45E4-80B4-36AFCA499F8A}.Release|Win32.Build.0 = Release|Win32
 		{802903FF-59BA-45E4-80B4-36AFCA499F8A}.Template|Win32.ActiveCfg = Release|Win32
 		{802903FF-59BA-45E4-80B4-36AFCA499F8A}.Template|Win32.Build.0 = Release|Win32
+		{5EBDAF1C-91FB-4FE5-88FF-F3FFB1B10674}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5EBDAF1C-91FB-4FE5-88FF-F3FFB1B10674}.Debug|Win32.Build.0 = Debug|Win32
+		{5EBDAF1C-91FB-4FE5-88FF-F3FFB1B10674}.Release|Win32.ActiveCfg = Release|Win32
+		{5EBDAF1C-91FB-4FE5-88FF-F3FFB1B10674}.Release|Win32.Build.0 = Release|Win32
+		{5EBDAF1C-91FB-4FE5-88FF-F3FFB1B10674}.Template|Win32.ActiveCfg = Release|Win32
+		{5EBDAF1C-91FB-4FE5-88FF-F3FFB1B10674}.Template|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

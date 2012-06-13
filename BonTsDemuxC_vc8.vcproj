@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(SolutionDir)\BonTsDemux&quot;;&quot;$(SolutionDir)\BonTsDemux\BonTsEngine&quot;;&quot;$(SolutionDir)\BonTsDemux\AacDecoder&quot;;&quot;$(SolutionDir)\BonTsDemux\HelperClass&quot;;&quot;$(SolutionDir)\BonTsDemux\Common&quot;"
+				AdditionalIncludeDirectories="BonTsEngine;AacDecoder;HelperClass;Common"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -119,7 +119,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;$(SolutionDir)\BonTsDemux&quot;;&quot;$(SolutionDir)\BonTsDemux\BonTsEngine&quot;;&quot;$(SolutionDir)\BonTsDemux\AacDecoder&quot;;&quot;$(SolutionDir)\BonTsDemux\HelperClass&quot;;..\Common"
+				AdditionalIncludeDirectories="BonTsEngine;AacDecoder;HelperClass;Common"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="2"
@@ -175,7 +175,7 @@
 	<References>
 		<ProjectReference
 			ReferencedProjectIdentifier="{802903FF-59BA-45E4-80B4-36AFCA499F8A}"
-			RelativePathToProject=".\BonTsDemux\BonTsDemuxLib_vc8.vcproj"
+			RelativePathToProject=".\BonTsDemuxLib_vc8.vcproj"
 		/>
 	</References>
 	<Files>
@@ -185,11 +185,11 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\BonTsDemuxC.cpp"
+				RelativePath=".\CLI\BonTsDemuxC.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\stdafx.cpp"
+				RelativePath=".\CLI\stdafx.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
@@ -215,15 +215,15 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\BonTsDemuxC.h"
+				RelativePath=".\CLI\BonTsDemuxC.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Resource.h"
+				RelativePath=".\CLI\Resource.h"
 				>
 			</File>
 			<File
-				RelativePath=".\stdafx.h"
+				RelativePath=".\CLI\stdafx.h"
 				>
 			</File>
 		</Filter>
@@ -233,12 +233,12 @@
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
 			<File
-				RelativePath=".\BonTsDemuxC.rc"
+				RelativePath=".\CLI\BonTsDemuxC.rc"
 				>
 			</File>
 		</Filter>
 		<File
-			RelativePath=".\ReadMe.txt"
+			RelativePath=".\CLI\ReadMe.txt"
 			>
 		</File>
 	</Files>

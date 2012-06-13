@@ -84,7 +84,6 @@
     <ClCompile Include="BonTsEngine\MediaDecoder.cpp" />
     <ClCompile Include="BonTsEngine\MediaGrabber.cpp" />
     <ClCompile Include="BonTsEngine\Multi2Decoder.cpp" />
-    <ClCompile Include="BonTsEngine\NamedPipeSend.cpp" />
     <ClCompile Include="BonTsEngine\ProgManager.cpp" />
     <ClCompile Include="BonTsEngine\qE77TinkWavWriter.cpp" />
     <ClCompile Include="BonTsEngine\RingBuffer.cpp" />
@@ -125,7 +124,6 @@
     <ClInclude Include="BonTsEngine\MediaDecoder.h" />
     <ClInclude Include="BonTsEngine\MediaGrabber.h" />
     <ClInclude Include="BonTsEngine\Multi2Decoder.h" />
-    <ClInclude Include="BonTsEngine\NamedPipeSend.h" />
     <ClInclude Include="BonTsEngine\ProgManager.h" />
     <ClInclude Include="BonTsEngine\qE77TinkWavWriter.h" />
     <ClInclude Include="BonTsEngine\RingBuffer.h" />
