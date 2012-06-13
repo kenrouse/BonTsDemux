@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BonTsDemux", "BonTsDemux.vcxproj", "{BA716F9B-A96C-4B8A-8199-34340F352783}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BonTsDemuxLib", "BonTsDemuxLib.vcxproj", "{802903FF-59BA-45E4-80B4-36AFCA499F8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Template|Win32 = Template|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA716F9B-A96C-4B8A-8199-34340F352783}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BA716F9B-A96C-4B8A-8199-34340F352783}.Debug|Win32.Build.0 = Debug|Win32
+		{BA716F9B-A96C-4B8A-8199-34340F352783}.Release|Win32.ActiveCfg = Release|Win32
+		{BA716F9B-A96C-4B8A-8199-34340F352783}.Release|Win32.Build.0 = Release|Win32
+		{BA716F9B-A96C-4B8A-8199-34340F352783}.Template|Win32.ActiveCfg = Template|Win32
+		{BA716F9B-A96C-4B8A-8199-34340F352783}.Template|Win32.Build.0 = Template|Win32
+		{802903FF-59BA-45E4-80B4-36AFCA499F8A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{802903FF-59BA-45E4-80B4-36AFCA499F8A}.Debug|Win32.Build.0 = Debug|Win32
+		{802903FF-59BA-45E4-80B4-36AFCA499F8A}.Release|Win32.ActiveCfg = Release|Win32
+		{802903FF-59BA-45E4-80B4-36AFCA499F8A}.Release|Win32.Build.0 = Release|Win32
+		{802903FF-59BA-45E4-80B4-36AFCA499F8A}.Template|Win32.ActiveCfg = Release|Win32
+		{802903FF-59BA-45E4-80B4-36AFCA499F8A}.Template|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

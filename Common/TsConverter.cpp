@@ -7,6 +7,11 @@
 STARTUPINFO ffmpeg_si;
 PROCESS_INFORMATION ffmpeg_pi;
 
+/** kemaruya **/
+CString m_szLogFilePath;
+HANDLE hOutput = NULL;
+/** kemaruya **/
+
 bool OpenFFmpeg(LPWSTR vlc)
 {
 	// ffmpegの起動。
@@ -37,10 +42,33 @@ bool OpenFFmpeg(LPWSTR vlc)
 #endif
 	
 
+	/** kemaruya **/
+	SECURITY_ATTRIBUTES sec_attr;
+	ZeroMemory(&sec_attr,sizeof(sec_attr));
+	sec_attr.nLength = sizeof(sec_attr);
+	sec_attr.bInheritHandle = TRUE;
 
-	BOOL ret = ::CreateProcess(NULL, vlc, NULL, NULL, FALSE, /*DETACHED_PROCESS*///0
-			CREATE_NEW_CONSOLE
-		, NULL, NULL, &ffmpeg_si, &ffmpeg_pi);
+    hOutput = ::CreateFile(m_szLogFilePath.GetString(),
+		GENERIC_READ | GENERIC_WRITE,
+		FILE_SHARE_READ | FILE_SHARE_WRITE,
+		&sec_attr,
+		CREATE_ALWAYS,
+		FILE_ATTRIBUTE_NORMAL,
+		NULL );
+ 
+    ffmpeg_si.dwFlags    = STARTF_USESHOWWINDOW | STARTF_USESTDHANDLES;
+    ffmpeg_si.hStdOutput = hOutput;
+	ffmpeg_si.hStdError  = hOutput;
+
+	BOOL ret = ::CreateProcess(NULL, vlc, NULL, NULL, TRUE,
+		CREATE_NO_WINDOW, NULL, NULL, &ffmpeg_si, &ffmpeg_pi);
+
+	//BOOL ret = ::CreateProcess(NULL, vlc, NULL, NULL, FALSE, /*DETACHED_PROCESS*///0
+	//		CREATE_NEW_CONSOLE
+	//	, NULL, NULL, &ffmpeg_si, &ffmpeg_pi);
+
+	/** kemaruya **/
+
 	if (ret) {
 		CloseHandle(ffmpeg_pi.hThread);
 	} else {
@@ -65,6 +93,15 @@ DWORD CloseFFmpeg(void)
 		CloseHandle(ffmpeg_pi.hProcess);
 		ffmpeg_pi.hProcess = INVALID_HANDLE_VALUE;
 	}
+
+	/** kemaruya **/
+	if( NULL != hOutput )
+	{
+		::CloseHandle(hOutput);
+	}
+	hOutput = NULL;
+	/** kemaruya **/
+
 	return ret;
 }
 
@@ -327,6 +364,12 @@ const WORD CTsConverter::ConvertTsFile(LPCTSTR lpszTsFile, QWORD qwInputSizeLimi
 		} else {
 			arg = arg + L" testout.mpg";
 		}
+
+		/** kemaruya **/
+		m_szLogFilePath = lpszVideoFile;
+		m_szLogFilePath += L".log";
+		/** kemaruya **/
+
 		if(!OpenFFmpeg(arg.GetBuffer(1)))
 		{
 			// エラー

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{802903FF-59BA-45E4-80B4-36AFCA499F8A}</ProjectGuid>
+    <RootNamespace>BonTsDemuxLib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\HelperClass;$(ProjectDir)\BonTsEngine;$(ProjectDir)\AacDecoder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)vc80lib.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\HelperClass;$(ProjectDir)\BonTsEngine;$(ProjectDir)\AacDecoder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AacDecoder\AacDecoder.cpp" />
+    <ClCompile Include="BonTsEngine\AacConverter.cpp" />
+    <ClCompile Include="BonTsEngine\BcasCard.cpp" />
+    <ClCompile Include="BonTsEngine\BcasCardM.cpp" />
+    <ClCompile Include="BonTsEngine\EcmDat.cpp" />
+    <ClCompile Include="BonTsEngine\FileReader.cpp" />
+    <ClCompile Include="BonTsEngine\FileWriter.cpp" />
+    <ClCompile Include="BonTsEngine\HttpSend.cpp" />
+    <ClCompile Include="BonTsEngine\KeepRate.cpp" />
+    <ClCompile Include="BonTsEngine\MediaData.cpp" />
+    <ClCompile Include="BonTsEngine\MediaDecoder.cpp" />
+    <ClCompile Include="BonTsEngine\MediaGrabber.cpp" />
+    <ClCompile Include="BonTsEngine\Multi2Decoder.cpp" />
+    <ClCompile Include="BonTsEngine\NamedPipeSend.cpp" />
+    <ClCompile Include="BonTsEngine\ProgManager.cpp" />
+    <ClCompile Include="BonTsEngine\qE77TinkWavWriter.cpp" />
+    <ClCompile Include="BonTsEngine\RingBuffer.cpp" />
+    <ClCompile Include="BonTsEngine\TsBuffer.cpp" />
+    <ClCompile Include="BonTsEngine\TsDemuxer.cpp" />
+    <ClCompile Include="BonTsEngine\TsDescrambler.cpp" />
+    <ClCompile Include="BonTsEngine\TsDescriptor.cpp" />
+    <ClCompile Include="BonTsEngine\TsEncode.cpp" />
+    <ClCompile Include="BonTsEngine\TsMedia.cpp" />
+    <ClCompile Include="BonTsEngine\TsPacketParser.cpp" />
+    <ClCompile Include="BonTsEngine\TsServiceSelect.cpp" />
+    <ClCompile Include="BonTsEngine\TsStream.cpp" />
+    <ClCompile Include="BonTsEngine\TsTable.cpp" />
+    <ClCompile Include="BonTsEngine\TsUtilClass.cpp" />
+    <ClCompile Include="BonTsEngine\WaveWriter.cpp" />
+    <ClCompile Include="HelperClass\ConfigData.cpp" />
+    <ClCompile Include="HelperClass\NCachedFile.cpp" />
+    <ClCompile Include="HelperClass\NFile.cpp" />
+    <ClCompile Include="Common\BonTsDemuxCUI.cpp" />
+    <ClCompile Include="Common\CommandLine.cpp" />
+    <ClCompile Include="Common\Misc.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Common\TsConverter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AacDecoder\AacDecoder.h" />
+    <ClInclude Include="AacDecoder\faad.h" />
+    <ClInclude Include="AacDecoder\neaacdec.h" />
+    <ClInclude Include="BonTsEngine\AacConverter.h" />
+    <ClInclude Include="BonTsEngine\BcasCard.h" />
+    <ClInclude Include="BonTsEngine\BcasCardM.h" />
+    <ClInclude Include="BonTsEngine\EcmDat.h" />
+    <ClInclude Include="BonTsEngine\FileReader.h" />
+    <ClInclude Include="BonTsEngine\FileWriter.h" />
+    <ClInclude Include="BonTsEngine\httpsend.h" />
+    <ClInclude Include="BonTsEngine\KeepRate.h" />
+    <ClInclude Include="BonTsEngine\MediaData.h" />
+    <ClInclude Include="BonTsEngine\MediaDecoder.h" />
+    <ClInclude Include="BonTsEngine\MediaGrabber.h" />
+    <ClInclude Include="BonTsEngine\Multi2Decoder.h" />
+    <ClInclude Include="BonTsEngine\NamedPipeSend.h" />
+    <ClInclude Include="BonTsEngine\ProgManager.h" />
+    <ClInclude Include="BonTsEngine\qE77TinkWavWriter.h" />
+    <ClInclude Include="BonTsEngine\RingBuffer.h" />
+    <ClInclude Include="BonTsEngine\TsDemuxer.h" />
+    <ClInclude Include="BonTsEngine\TsDescrambler.h" />
+    <ClInclude Include="BonTsEngine\TsDescriptor.h" />
+    <ClInclude Include="BonTsEngine\TsEncode.h" />
+    <ClInclude Include="BonTsEngine\TsMedia.h" />
+    <ClInclude Include="BonTsEngine\TsPacketParser.h" />
+    <ClInclude Include="BonTsEngine\tsserviceselect.h" />
+    <ClInclude Include="BonTsEngine\TsStream.h" />
+    <ClInclude Include="BonTsEngine\TsTable.h" />
+    <ClInclude Include="BonTsEngine\TsUtilClass.h" />
+    <ClInclude Include="BonTsEngine\WaveWriter.h" />
+    <ClInclude Include="HelperClass\ConfigData.h" />
+    <ClInclude Include="HelperClass\NCachedFile.h" />
+    <ClInclude Include="HelperClass\NFile.h" />
+    <ClInclude Include="Common\BonTsDemuxCUI.h" />
+    <ClInclude Include="Common\CommandLine.h" />
+    <ClInclude Include="Common\Misc.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Common\TsConverter.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
